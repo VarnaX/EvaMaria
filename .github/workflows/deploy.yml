@@ -13,6 +13,7 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           usedocker: true
+          buildpack: "heroku/python"
           docker_heroku_process_type: worker
           stack: "container"
           region: "us"
