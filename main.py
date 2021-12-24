@@ -33,6 +33,7 @@ except TypeError:
 load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = os.environ.get('UPSTREAM_REPO', None)
+print(UPSTREAM_REPO)
 try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
