@@ -33,7 +33,6 @@ except TypeError:
 load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = os.environ.get('UPSTREAM_REPO', None)
-print(UPSTREAM_REPO)
 try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
@@ -41,6 +40,7 @@ except TypeError:
     UPSTREAM_REPO = None
 
 if UPSTREAM_REPO is not None:
+    logging.info(f"Updating with {UPSTREAM_REPO}")
     if os.path.exists('.git'):
         subprocess.run(["rm", "-rf", ".git"])
 
