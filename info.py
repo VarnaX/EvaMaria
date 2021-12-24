@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv('config.env', override=True)
 
 id_pattern = re.compile(r'^.\d+$')
+print(os.environ.get('API_ID', None))
 
 def get_var(var_name, default=None, is_int=False, is_bool=False, is_required=False):
     try:
