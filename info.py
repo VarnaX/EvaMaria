@@ -18,7 +18,7 @@ def get_var(var_name, default=None, is_int=False, is_bool=False, is_required=Fal
             else:
                 var = default
         return var
-    except exception as e:
+    except Exception as e:
         print(f'Error:- {e}')
         if is_required:
             print('One or more env variables missing! Exiting now')
