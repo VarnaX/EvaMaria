@@ -33,7 +33,7 @@ except TypeError:
 load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = os.environ.get('UPSTREAM_REPO', None)
-print(os.environ.get('API_ID', None))
+print(f'X{os.environ.get('API_ID', None)}')
 
 try:
     if len(UPSTREAM_REPO) == 0:
