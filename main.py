@@ -4,7 +4,6 @@ import requests
 import logging
 
 from dotenv import load_dotenv
-print('VarnaX')
 if os.path.exists('log.txt'):
     with open('log.txt', 'r+') as f:
         f.truncate(0)
@@ -33,7 +32,6 @@ except TypeError:
 load_dotenv('config.env', override=True)
 
 UPSTREAM_REPO = os.environ.get('UPSTREAM_REPO', None)
-print(f'x{os.environ.get("API_ID", None)}')
 
 try:
     if len(UPSTREAM_REPO) == 0:
