@@ -1,5 +1,8 @@
 import re
 from os import environ
+from dotenv import load_dotenv
+
+load_dotenv('config.env', override=True)
 
 id_pattern = re.compile(r'^.\d+$')
 
